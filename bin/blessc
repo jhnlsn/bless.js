@@ -13,7 +13,8 @@ var options = {
     cacheBuster: true,
     cleanup: true,
     compress: false,
-    force: false
+    force: false,
+    imports: true
 };
 
 args = args.filter(function (arg) {
@@ -44,6 +45,9 @@ args = args.filter(function (arg) {
             break;
         case 'no-cache-buster':
             options.cacheBuster = false;
+            break;
+        case 'no-imports':
+            options.imports = false;
     }
 });
 
